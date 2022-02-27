@@ -47,4 +47,4 @@ def generate_color():
     return jsonify({'colors': colorscheme})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
