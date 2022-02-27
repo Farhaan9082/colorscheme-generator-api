@@ -10,6 +10,10 @@ import cv2
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/", methods=["GET"])
+def home():
+    return {'data': 'Api is Running'}
+
 @app.route("/color", methods=["POST"])
 def generate_color():
     image = request.files['image'].read()
